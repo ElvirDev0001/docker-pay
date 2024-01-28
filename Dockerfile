@@ -20,4 +20,4 @@ EXPOSE 8000
 
 # Define the command to run your application
 # Note: Railway and other platforms might override the CMD to use a specific port
-CMD ["gunicorn", "main:server", "-b", "0.0.0.0:8000"]
+CMD gunicorn main:server -b 0.0.0.0:$PORT
